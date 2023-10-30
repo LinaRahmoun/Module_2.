@@ -1,0 +1,26 @@
+# Module_2.
+public class RecursiveSeriesSum {
+
+    public static double calculateM(int i) {
+        if (i == 1) {
+            return 1.0 / 2;
+        } else {
+            double previousSum = calculateM(i - 1);
+            return previousSum + (double) i / (i + 1);
+        }
+    }
+
+    public static void main(String[] args) {
+        int n1 = 4;
+        int n2 = 9;
+        int n3 = 14;
+
+        double result1 = calculateM(n1);
+        double result2 = calculateM(n2);
+        double result3 = calculateM(n3);
+
+        System.out.println("m(" + n1 + ") = " + result1);
+        System.out.println("m(" + n2 + ") = " + result2);
+        System.out.println("m(" + n3 + ") = " + result3);
+    }
+}
